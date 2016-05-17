@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bp3</groupId>
+  <artifactId>jgivenTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<name>JGiven</name>
+	<description>Sample JGiven project using Selenium</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.tngtech.jgiven</groupId>
+			<artifactId>jgiven-testng</artifactId>
+			<version>0.9.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.0</version>
+		</dependency>
+		<dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>2.53.0</version>
+        </dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.13</version>
+		</dependency>
+	</dependencies>
+  
+  	<build>
+  		<plugins>
+    		<plugin>
+      			<groupId>com.tngtech.jgiven</groupId>
+      			<artifactId>jgiven-maven-plugin</artifactId>
+      			<version>0.11.3</version>
+      			<executions>
+        			<execution>
+          				<goals>
+            				<goal>report</goal>
+          				</goals>
+        			</execution>
+      			</executions>
+      			<configuration>
+       				<format>html</format>
+      			</configuration>
+    		</plugin>
+ 		</plugins>
+	</build>
+	
+</project>
